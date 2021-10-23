@@ -14,7 +14,8 @@ const app = Vue.createApp({
             message: 'Hello World',
             quote: 'I am Batman',
             author: 'Bruce Wayne',
-            quotes
+            quotes,
+            newQuote: 'Hello World'
         }
     },
     methods: {
@@ -24,6 +25,11 @@ const app = Vue.createApp({
         },
         capitalize() {
             this.author = this.author.toUpperCase();
+        },
+        addQuote({ key }) {
+            this.quotes.unshift({
+                quote: this.newQuote 
+            });
         }
     }
 });
