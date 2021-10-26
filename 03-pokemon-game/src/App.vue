@@ -1,7 +1,9 @@
 <template>
 <div>
   <PokemonPage />
-  <PokemonPicture />
+  <PokemonPicture
+    :pokemonId="7"
+    :showPokemon="true" />
   <PokemonOptions />
 </div>
 </template>
