@@ -12,6 +12,8 @@ const getPokemonOptions = async() => {
     
     const pokemons = await getPokemonNames( mixedPokemons.splice(0, 4) )
 
+    return pokemons
+
 }
 
 const getPokemonNames = async( [a, b, c, d] = [] ) => {
