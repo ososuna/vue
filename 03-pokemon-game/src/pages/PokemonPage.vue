@@ -4,7 +4,7 @@
         <h1 v-if="!pokemon">Loading...</h1>
 
         <div v-else>
-            <h1>Who's that pokemon? (esta va para mi compañero Iván uwu)</h1>
+            <h1>Who's that pokemon? (para mi polola Andy uwu)</h1>
             <PokemonPicture
                 :pokemonId="pokemon.id"
                 :showPokemon="showPokemon" />
@@ -15,6 +15,7 @@
             <template v-if="showAnswer">
                 <h2 class="fade-in">{{ message }}</h2>
                 <button @click='newGame'>New Game</button>
+                <br><br>
             </template>
         </div>
     </div>
