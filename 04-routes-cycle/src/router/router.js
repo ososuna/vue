@@ -12,8 +12,13 @@ const routes = [
     component: () => import('../modules/pokemon/pages/AboutPage')
   },
   {
-    path: '/id',
-    component: () => import('../modules/pokemon/pages/PokemonPage')
+    path: '/:id',
+    name: 'pokemon-id',
+    component: () => import('../modules/pokemon/pages/PokemonPage'),
+    props: ({ params }) => {
+      const id = Number( params.id )
+      return isNaN( id ) ? { id: 1 } : { id }
+    }
   },
   {
     path: '/:pathMatch(.*)*',
